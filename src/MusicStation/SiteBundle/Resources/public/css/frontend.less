@@ -1,0 +1,567 @@
+@import '/../assets/bootstrap/less/bootstrap.less';
+@import '/../assets/bootstrap/less/mixins.less';
+
+@iconSpritePath:          "/assets/bootstrap/img/glyphicons-halflings.png";
+@iconWhiteSpritePath:     "/assets/bootstrap/img/glyphicons-halflings-white.png";
+
+@green:       #95c11f;
+
+@grey-dark:   #2f3030;
+@grey-light:  #a7a7a7;
+@grey-lighter: #e3e3e3;
+
+@red-dark:    #be0d1d;
+
+@font-face {
+  font-family: 'helveticaneuelight';
+  src: url('/fonts/helveticaneue-light-webfont.eot');
+  src: url('/fonts/helveticaneue-light-webfont.eot?#iefix') format('embedded-opentype'),
+  url('/fonts/helveticaneue-light-webfont.woff') format('woff'),
+  url('/fonts/helveticaneue-light-webfont.ttf') format('truetype'),
+  url('/fonts/helveticaneue-light-webfont.svg#helveticaneuelight') format('svg');
+  font-weight: normal;
+  font-style: normal;
+
+}
+
+/******************************************************************************************
+box-sizing hack: border-box
+
+http://paulirish.com/2012/box-sizing-border-box-ftw/
+******************************************************************************************/
+* { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+
+/*********************************************************************************************************
+layout
+*********************************************************************************************************/
+html {
+  body {
+    height: 100%;
+    min-height: 100%;
+
+    padding:  0px;
+    margin: 0px;
+    background: @grey-lighter;
+
+    font-family: 'helveticaneuelight', Arial, sans-serif;
+    font-size: 16px;
+
+    &, p { font-size: 14px; }
+  }
+}
+
+h1, h2, h3, h4, h5, h6 { margin: 0px; }
+p { margin:0px; }
+
+ul {
+  li { list-style-type: none; }
+}
+
+a {
+  color:  @grey-dark;
+  &:hover {
+    text-decoration: none;
+    color:    @red-dark;
+  }
+}
+
+textarea{ resize:none }
+
+
+/*********************************************************************************************************
+header
+*********************************************************************************************************/
+#header {
+  overflow: hidden;
+  font-size:    26px;
+  font-weight:  bold;
+
+  .well {
+    background: @red-dark;
+    color:  white;
+
+    a {
+      color:  white;
+    }
+
+    #submenu {
+      float:  right;
+      margin: 0px;
+      margin-bottom: 40px;
+
+      li {
+        float: left;
+        margin: 0px 10px;
+
+        a {
+          font-size:    14px;
+          font-weight: normal;
+        }
+
+      }
+    }
+  }
+}
+
+/*********************************************************************************************************
+box user info
+*********************************************************************************************************/
+#box-user-info {
+  margin-bottom:  30px;
+  background:     #F1F1F1;
+  padding:        10px;
+  text-align:     center;
+
+  a {
+    font-size:  140%;
+    font-weight:  bold;
+    margin: 10px;
+  }
+  &.logged {
+    text-align:     right;
+    a {
+      font-size:      100%;
+      margin:         0px;
+    }
+  }
+}
+
+/*********************************************************************************************************
+box aside shouts
+*********************************************************************************************************/
+ul.box-shouts { padding:  0px; margin:  0px;
+  li {
+    margin-bottom:  20px;
+    border-bottom: 1px solid #CCC;
+    padding-bottom: 19px;
+    vertical-align: top;
+
+    &:last-child {
+      border: 0px none;
+    }
+
+    img { .square(20px); }
+  }
+}
+
+/*********************************************************************************************************
+box error
+*********************************************************************************************************/
+.box-error {
+  text-align: center;
+  p {
+    font-size:  22px;
+  }
+}
+
+/*********************************************************************************************************
+route HOMEPAGE
+*********************************************************************************************************/
+.route-homepage {
+  .box-events {
+    overflow: hidden;
+
+    width:  9*@gridColumnWidth + 8*@gridGutterWidth + @gridGutterWidth;
+    margin-left:  -@gridGutterWidth;
+
+    > div {
+      float:      left;
+      padding:    6px;
+      margin:     0 0 @gridGutterWidth @gridGutterWidth;
+      width:      3*@gridColumnWidth + 2*@gridGutterWidth;
+      background: #F1F1F1;
+      border:     1px solid #CCC;
+      position:   relative;
+
+      a.artist {
+        margin-bottom: 10px;
+        float: left; clear: both;
+
+        font-weight: bold;
+        font-size: 16px;
+        vertical-align: top;
+
+        img { .square(40px); }
+      }
+
+      a.event-info {
+        float: left;
+        clear: both;
+        position: relative;
+        width:  100%;
+
+        border-top:  1px solid #CCC;
+        padding-top:  5px;
+
+        .location { margin-top: 20px; }
+        .start-date { font-size: 12px; }
+
+      }
+      a.more-info {
+        position: absolute; bottom: 6px; right: 6px;
+        font-weight:  bold;
+      }
+    }
+  }
+}
+
+/*********************************************************************************************************
+route ARTIST_INDEX
+*********************************************************************************************************/
+.route-artist_index {
+  ul#artists {
+    width:  9*@gridColumnWidth + 8*@gridGutterWidth + @gridGutterWidth;
+    padding:  0px;
+    margin:   0px;
+    margin-left:  -@gridGutterWidth;
+    overflow: hidden;
+
+    li {
+      float:  left;
+      margin:     0 0 @gridGutterWidth @gridGutterWidth;
+      width:      4*@gridColumnWidth + 3*@gridGutterWidth;
+      margin-bottom:  20px;
+      vertical-align: top;
+
+      img { .square(60px); margin-right: 20px; }
+    }
+  }
+}
+
+/*********************************************************************************************************
+route ARTIST_SHOW
+*********************************************************************************************************/
+.route-artist_show {
+  #box-artist {
+      img {
+        float: left;
+        margin: 0 20px 20px 0;
+      }
+  }
+}
+
+/*********************************************************************************************************
+route EVENT_SHOW
+*********************************************************************************************************/
+.route-event_show {
+  .box-event {
+    overflow: hidden;
+    width:  400px;
+    margin: 0 auto;
+    padding:  20px;
+    border: 1px solid #CCC;
+    background: #F1F1F1;
+
+    > * {
+      float: left;
+      clear:  both;
+
+      &.artist {
+        vertical-align: top;
+        margin-bottom:  20px;
+        img { .square(40px); margin-right: 10px;  }
+      }
+
+      span {
+        font-weight:  bold;
+      }
+    }
+  }
+}
+
+/*********************************************************************************************************
+route SHOUT_SHOW
+*********************************************************************************************************/
+.route-shout_show {
+  .box-shout {
+    overflow: hidden;
+    width:  400px;
+    margin: 0 auto;
+    padding:  20px;
+    border: 1px solid #CCC;
+    background: #F1F1F1;
+
+    > * {
+      float: left;
+      clear:  both;
+
+      &.artist {
+        vertical-align: top;
+        margin-bottom:  20px;
+        img { .square(40px); margin-right: 10px;  }
+      }
+
+      &.message {
+        font-weight:  bold;
+      }
+    }
+  }
+
+  #shout-prev-next {
+    overflow: hidden;
+    margin-top: 100px;
+
+    a {
+      width:  220px;
+      border: 1px solid transparent;
+      padding:  10px;
+
+      &:hover {
+        border: 1px solid #CCC;
+        background: #F1F1F1;
+      }
+
+      > * { float: left; }
+
+      i {
+        margin-top: 12px;
+      }
+
+      div.content {
+        width:  180px;
+        font-size:  11px;
+        img { .square(20px); }
+      }
+
+      &.prev {
+        float:  left;
+        div.content {
+        padding-left: 20px;
+          img { float: left; }
+        }
+      }
+
+      &.next {
+        float: right;
+        div.content {
+          padding-right: 20px;
+          text-align: right;
+          img { float: right; }
+        }
+      }
+    }
+  }
+}
+
+/*********************************************************************************************************
+route FEEDBACK
+*********************************************************************************************************/
+.route-feedback {
+  #form-feedback {
+    input[type="text"], input[type="email"], textarea {
+      padding:  5px;
+      width:  90%;
+      height: 40px;
+    }
+    textarea {
+      height: 200px;
+    }
+
+    #box-privacy {
+      input { margin-top: -2px; }
+    }
+
+    .help-inline {
+      ul {
+        margin: 0px;
+      }
+    }
+
+    .form-actions { background: inherit; }
+  }
+}
+
+/*********************************************************************************************************
+route fos_user_registration_register
+*********************************************************************************************************/
+.route-fos_user_registration_register {
+  #register-form {
+    input[type="text"],
+    input[type="password"],
+    input[type="email"],
+    textarea {
+      padding:  5px;
+      width:  100%;
+      height: 40px;
+    }
+    textarea { height: 120px; }
+
+    ul { margin: 0px;
+      li { color: @red;}
+    }
+  }
+}
+
+/*********************************************************************************************************
+route fos_user_security_login
+*********************************************************************************************************/
+.route-fos_user_security_login {
+  #login-form {
+    input[type="text"], input[type="password"] {
+      padding:  5px;
+      width:  90%;
+      height: 40px;
+    }
+
+    ul { margin: 0px;
+      li { color: @red;}
+    }
+  }
+}
+
+/*********************************************************************************************************
+route fos_user_profile_edit
+*********************************************************************************************************/
+.route-fos_user_profile_edit {
+  .fos_user_profile_edit {
+    margin-top: 40px;
+
+    input[type="text"],
+    input[type="password"],
+    input[type="email"],
+    textarea {
+      padding:  5px;
+      width:  100%;
+      height: 40px;
+    }
+
+    ul { margin: 0px;
+      li { color: @red;}
+    }
+  }
+}
+
+
+
+/*********************************************************************************************************
+route user_index
+*********************************************************************************************************/
+.route-user_index {
+  ul#user-menu {
+    overflow: hidden;
+    width:    786px;
+    margin: 0 auto;
+    margin-top: 60px;
+
+
+    li {
+      float:  left;
+      border: 1px solid #CCC;
+      background: #FAFAFA;
+      margin: 0px 10px;
+      text-align: center;
+
+      a {
+        float:  left;
+        width:  240px;
+        height:  180px;
+        padding-top:  80px;
+        &:hover {
+          background: #be0d1d;
+          color:      @white;
+        }
+      }
+    }
+  }
+}
+
+/*********************************************************************************************************
+route user_event
+*********************************************************************************************************/
+.route-user_event {
+  h1 {
+    margin-bottom:  40px;
+  }
+
+  table.records_list {
+    form {
+      margin-top: 5px;
+    }
+    a.btn-mini {
+      width:  60px;
+      text-align: left;
+    }
+  }
+}
+
+/*********************************************************************************************************
+routes user_event_new, user_event_edit
+*********************************************************************************************************/
+.route-user_event_new, .route-user_event_edit {
+  h1 {
+    margin-bottom:  40px;
+  }
+  form {
+    margin-top: 40px;
+
+    input[type="text"],
+    textarea {
+      padding:  5px;
+      width:  260px;
+      height: 40px;
+    }
+
+    .add-on {
+      padding-top:  34px;
+      i { margin-top: -21px; }
+    }
+
+    ul { margin: 0px;
+      li { color: @red;}
+    }
+
+    .form-actions {
+      background: inherit;
+    }
+  }
+}
+
+/*********************************************************************************************************
+route user_shout
+*********************************************************************************************************/
+.route-user_shout {
+  h1 {
+    margin-bottom:  40px;
+  }
+
+  table.records_list {
+    form {
+      margin-top: 5px;
+    }
+    a.btn-mini {
+      width:  60px;
+      text-align: left;
+    }
+  }
+}
+
+/*********************************************************************************************************
+routes user_shout_new, user_shout_edit
+*********************************************************************************************************/
+.route-user_shout_new, .route-user_shout_edit {
+  h1 {
+    margin-bottom:  40px;
+  }
+  form {
+    margin-top: 40px;
+
+    textarea {
+      padding:  5px;
+      width: 400px;
+      height: 200px;
+    }
+
+    .add-on {
+      padding-top:  34px;
+      i { margin-top: -21px; }
+    }
+
+    ul { margin: 0px;
+      li { color: @red;}
+    }
+
+    .form-actions {
+      background: inherit;
+    }
+  }
+}

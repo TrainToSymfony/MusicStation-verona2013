@@ -1,0 +1,5 @@
+music_station_site:
+    resource: "@MusicStationSiteBundle/Controller/"
+    type:     annotation
+    prefix:   /
+

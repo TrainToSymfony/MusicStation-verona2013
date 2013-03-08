@@ -1,0 +1,139 @@
+parameters:
+    fixture_artists:
+
+        "Coldplay":
+            bio: "Coldplay are a British alternative rock band formed in 1996 by lead vocalist Chris Martin and lead guitarist Jonny Buckland at University College London. After they formed under the name Pectoralz, Guy Berryman joined the group as a bassist and they changed their name to Starfish. Will Champion joined as a drummer, backing vocalist, and multi-instrumentalist, completing the line-up. Manager Phil Harvey is often considered an unofficial fifth member. The band renamed themselves \"Coldplay\" in 1998, before recording and releasing three EPs; Safety in 1998, Brothers & Sisters as a single in 1999 and The Blue Room in the same year. The latter was their first release on a major label, after signing to Parlophone.<br>They achieved worldwide fame with the release of the single \"Yellow\" in 2000, followed by their debut album released in the same year, Parachutes, which was nominated for the Mercury Prize. The band's second album, A Rush of Blood to the Head (2002), was released to critical acclaim and won multiple awards, including NME's Album of the Year. Their next release, X&Y, the best-selling album worldwide in 2005, was met with mostly positive reviews upon its release, though some critics felt that it was inferior to its predecessor. The band's fourth studio album, Viva la Vida or Death and All His Friends (2008), was produced by Brian Eno and released again to largely positive reviews, earning several Grammy nominations and wins at the 51st Grammy Awards. On 24 October 2011, they released their fifth studio album, Mylo Xyloto, which received mixed to positive reviews, topped the charts in over 34 countries, and was the UK's best-selling rock album of 2011."
+            image: "coldplay.jpg"
+            events:
+                -
+                    location: "Roma"
+                    startDate: "2013-06-19 22:00:00"
+                -
+                    location: "Parigi"
+                    startDate: "2013-07-02 21:30:00"
+                -
+                    location: "Berlino"
+                    startDate: "2013-08-27 22:00:00"
+                -
+                    location: "Stoccolma"
+                    startDate: "2013-09-01 23:00:00"
+                -
+                    location: "Londra"
+                    startDate: "2013-10-07 22:00:00"
+            shouts:
+                - "Hear In My Place (Acoustic) for Oxfam video"
+                - "Coldplay win Best British Live Act at BRITs"
+
+        "Depeche mode":
+            bio: "Depeche Mode are an English electronic music band formed in 1980 in Basildon, Essex. The group's original line-up consisted of Dave Gahan (lead vocals, occasional songwriter since 2005), Martin Gore (keyboards, guitar, vocals, chief songwriter after 1981), Andy Fletcher (keyboards) and Vince Clarke (keyboards, chief songwriter 1980–81). Clarke left the band after the release of their 1981 debut album, Speak & Spell, and was replaced by Alan Wilder (keyboards, drums, occasional songwriter) with Gore taking over songwriting. Wilder left the band in 1995; Gahan, Gore, and Fletcher have since continued as a trio."
+            image: "depeche_mode.jpg"
+            events:
+                -
+                    location: "Milano"
+                    startDate: "2013-06-17 22:45:00"
+                -
+                    location: "Torino"
+                    startDate: "2013-07-02 22:30:00"
+                -
+                    location: "Madrid"
+                    startDate: "2013-08-04 21:00:00"
+                -
+                    location: "Lisbona"
+                    startDate: "2013-08-08 23:30:00"
+                -
+                    location: "Barcellona"
+                    startDate: "2013-10-08 22:00:00"
+            shouts:
+                - "Depeche Mode Announce Showcase Presented by Yahoo! @ SXSW Music Festival on Friday, March 15th"
+                - "Depeche Mode’s SXSW performance will be available on Yahoo! Music on March 26"
+
+        "Muse":
+            bio: "Muse are an English rock band from Teignmouth, Devon, which formed in 1994. The band consists of school friends Matthew Bellamy (lead vocals, lead guitar, piano, keyboards, keytar), Christopher Wolstenholme (bass, vocals, keyboards, rhythm guitar, harmonica) and Dominic Howard (drums, percussion, synthesisers, sampling).<br>Since the release of their 2006 album Black Holes and Revelations, keyboardist and percussionist Morgan Nicholls has performed live with the band. Muse are known for their energetic and extravagant live performances and their fusion of many music genres, including space rock, progressive rock, alternative rock, heavy metal, classical music and electronica."
+            image: "muse.jpg"
+            events:
+                -
+                    location: "Londra"
+                    startDate: "2013-07-18 21:00:00"
+                -
+                    location: "Manchester"
+                    startDate: "2013-07-24 22:00:00"
+                -
+                    location: "Bristol"
+                    startDate: "2013-07-30 22:00:00"
+                -
+                    location: "Glasgow"
+                    startDate: "2013-08-09 22:00:00"
+                -
+                    location: "Newcastle"
+                    startDate: "2013-08-12 22:00:00"
+                -
+                    location: "Cardiff"
+                    startDate: "2013-08-20 21:00:00"
+                -
+                    location: "Edinburgh"
+                    startDate: "2013-08-27 22:00:00"
+                -
+                    location: "Aberdeen"
+                    startDate: "2013-09-12 23:00:00"
+                -
+                    location: "Iverness"
+                    startDate: "2013-09-20 21:00:00"
+            shouts:
+                - "Lo stage dei Muse assemblato in 5 minuti!"
+                - "I Muse vincono il Best Fan Community NME Award"
+
+        "Radiohead":
+            bio: "Radiohead are an English rock band from Abingdon, Oxfordshire, formed in 1985. The band consists of Thom Yorke (lead vocals, guitar, piano), Jonny Greenwood (lead guitar, keyboards, other instruments), Colin Greenwood (bass), Phil Selway (drums, percussion) and Ed O'Brien (guitar, backing vocals).<br>Radiohead released their debut single \"Creep\" in 1992. The song was initially unsuccessful, but it became a worldwide hit several months after the release of their debut album, Pablo Honey (1993). Radiohead's popularity rose in the United Kingdom with the release of their second album, The Bends (1995). Radiohead's third album, OK Computer (1997), propelled them to greater international fame. Featuring an expansive sound and themes of modern alienation, OK Computer is often acclaimed as one of the landmark records of the 1990s.<br>Kid A (2000) and Amnesiac (2001) marked an evolution in Radiohead's musical style, as the group incorporated experimental electronic music, krautrock and jazz influences. Kid A, though somewhat polarising at the time of its release, is now frequently recognised as one of the most important albums of the 2000s. Hail to the Thief (2003), a mix of piano and guitar driven rock, electronics and lyrics inspired by war, was the band's final album for their major record label, EMI. Radiohead self-released their seventh album, In Rainbows (2007), as a digital download for which customers could set their own price, and later in physical form to critical and chart success. Radiohead's eighth album, The King of Limbs (2011), was an exploration of rhythm and quieter textures, which the band released independently."
+            image: "radiohead.jpg"
+            events:
+                -
+                    location: "Amburgo"
+                    startDate: "2013-06-24 23:30:00"
+                -
+                    location: "Brema"
+                    startDate: "2013-07-06 22:30:00"
+                -
+                    location: "Francoforte"
+                    startDate: "2013-08-21 21:00:00"
+                -
+                    location: "Nancy"
+                    startDate: "2013-08-29 21:00:00"
+                -
+                    location: "Digione"
+                    startDate: "2013-09-11 23:00:00"
+                -
+                    location: "Lione"
+                    startDate: "2013-09-19 22:00:00"
+                -
+                    location: "Grenoble"
+                    startDate: "2013-09-25 22:00:00"
+                -
+                    location: "Marsiglia"
+                    startDate: "2013-10-12 22:00:00"
+            shouts:
+                - "The King of Limbs - From The Basement (DVD & BluRay + Free Download)"
+                - "Radiohead to Start Working on New Album in September"
+
+        "The Rolling stones":
+            bio: "The Rolling Stones are an English rock band formed in London in 1962.<br>The first settled line-up consisted of Brian Jones on guitar and harmonica, Ian Stewart on piano, Mick Jagger on lead vocals and harmonica, Keith Richards on guitar and vocals, Bill Wyman on bass and Charlie Watts on drums.<br>Since Wyman's retirement in 1993, the band's full members have been Jagger, Richards, Watts and guitarist Ronnie Wood who joined in 1975, replacing Mick Taylor (who followed Jones). Jones founded and led the band, but Jagger and Richards assumed leadership after becoming the band's primary songwriters, as Jones' physical and mental troubles gradually incapacitated him prior to his drowning death in 1969. Longtime regular bassist Darryl Jones and keyboardist Chuck Leavell are not full band members.<br>The Rock and Roll Hall of Fame inducted the Rolling Stones in 1989 noting that critics and the public recognized their claim to the title of \"World’s Greatest Rock and Roll Band.\" Rolling Stone magazine ranked them 4th on their \"100 Greatest Artists of All Time\" list, and their album sales are estimated to have been more than 200 million worldwide."
+            image: "the_rolling_stones.jpg"
+            events:
+                -
+                    location: "Londra"
+                    startDate: "2013-06-29 20:00:00"
+                -
+                    location: "Berlino"
+                    startDate: "2013-06-20 21:00:00"
+                -
+                    location: "Parigi"
+                    startDate: "2013-07-21 21:00:00"
+                -
+                    location: "Barcellona"
+                    startDate: "2013-08-12 21:00:00"
+                -
+                    location: "Roma"
+                    startDate: "2013-09-03 21:00:00"
+            shouts:
+                - "Tonight the Rolling Stones celebrated a double victory at the annual NME Awards"
+                - "The Rolling Stones have been nominated for the BRIT award for Best Live Act!"
+

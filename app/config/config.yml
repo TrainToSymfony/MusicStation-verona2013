@@ -1,6 +1,7 @@
 imports:
     - { resource: parameters.yml }
     - { resource: security.yml }
+    - { resource: fixtures_artists.yml }
 
 framework:
     #esi:             ~

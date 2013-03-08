@@ -1,9 +1,41 @@
 {% extends 'MusicStationSiteBundle::layout.html.twig' %}
 
 {% block main %}
-    main content
+
+    <div class="box-events">
+        {% for event in events %}
+            <div>
+                <a class="artist" href="{{ path('artist_show', {id: event.artist.id}) }}">
+                    <img src="{{ asset('images/'~event.artist.image) }}">
+                    {{ event.artist.name }}
+                </a>
+
+                <a class="event-info" href="{{ path('event_show', {id: event.id}) }}">
+                    <span class="location">{{ event.location }}</span>
+                    <br
+                    <span class="start-date">{{ event.startDate|date('d/m/Y H:i') }}</span>
+                </a>
+
+                <a class="more-info" href="{{ path('event_show', {id: event.id}) }}">
+                    info
+                </a>
+            </div>
+        {% endfor %}
+    </div>
+    
 {% endblock %}
 
 {% block aside %}
-    aside content
+
+    <ul class="box-shouts">
+        {% for shout in shouts %}
+            <li>
+                <a href="{{ path('shout_show', {id: shout.id}) }}">
+                    <img src="{{ asset('images/'~shout.artist.image) }}">
+                    {{ shout.message }}
+                </a>
+            </li>
+        {% endfor %}
+    </ul>
+
 {% endblock %}

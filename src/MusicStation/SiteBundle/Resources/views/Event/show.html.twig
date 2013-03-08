@@ -1,0 +1,25 @@
+{% extends 'MusicStationSiteBundle::layout.html.twig' %}
+
+{% block container %}
+
+    <div class="span12">
+
+        <h1>Event</h1>
+
+        <div class="box-event">
+            <a class="artist" href="{{ path('artist_show', {id: entity.artist.id}) }}">
+                <img src="{{ asset('images/'~entity.artist.image) }}">
+                {{ entity.artist.name }}
+            </a>
+
+            <p>
+                <span>Location:</span> {{ entity.location }}
+            </p>
+            <p>
+                <span>Start date:</span> {{ entity.startDate|date('d/m/Y, H:i') }}
+            </p>
+        </div>
+
+    </div>
+
+{% endblock %}

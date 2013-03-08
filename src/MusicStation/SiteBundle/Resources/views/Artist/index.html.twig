@@ -1,0 +1,23 @@
+{% extends 'MusicStationSiteBundle::layout.html.twig' %}
+
+{% block container %}
+
+    <div class="span12">
+
+        <h1>Artists</h1>
+
+        <br><br>
+
+        <ul id="artists">
+            {% for entity in entities %}
+                <li>
+                    <a class="entity" href="{{ path('artist_show', {id: entity.id}) }}">
+                        <img src="{{ asset('images/'~entity.image) }}">
+                        {{ entity.name }}
+                    </a>
+                </li>
+            {% endfor %}
+        </ul>
+    </div>
+
+{% endblock %}

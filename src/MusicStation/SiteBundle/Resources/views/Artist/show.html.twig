@@ -1,0 +1,19 @@
+{% extends 'MusicStationSiteBundle::layout.html.twig' %}
+
+{% block container %}
+
+    <div class="span4">
+        <img src="{{ asset('images/'~entity.image) }}">
+    </div>
+
+    <div class="span8">
+        <h1>{{ entity.name }}</h1>
+
+        <br><br><br>
+
+        <p class="bio">
+            {{ entity.bio }}
+        </p>
+    </div>
+
+{% endblock %}

@@ -66,7 +66,7 @@ EOF
      */
     private function truncateTables()
     {
-        $tablesToBeTruncated = array('Artist', 'Event', 'Shout');
+        $tablesToBeTruncated = array('Artist', 'Event', 'Shout', 'fos_user');
 
         $connection = $this->em->getConnection();
         $platform   = $connection->getDatabasePlatform();
@@ -100,6 +100,10 @@ EOF
 
         // insert shouts
         $this->insertShouts($artist, $info);
+
+        // create linked User entity
+        $this->linkUser($artist, $info);
+
 
         $this->em->persist($artist);
         $this->em->flush();
@@ -143,21 +147,26 @@ EOF
             $artist->addShout($shout);
         }
     }
+
+    /**
+     * create a new User entity and link it with $artist
+     *
+     * @param $artist
+     * @param array $info
+     */
+    private function linkUser($artist, $info = array())
+    {
+        $userManager = $this->getContainer()->get('fos_user.user_manager');
+
+        $user = $userManager->createUser();
+
+        $user->setUsername($info['user']['username']);
+        $user->setPlainPassword($info['user']['password']);
+        $user->setEmail("{$info['user']['username']}@musicstation.com");
+        $user->setEnabled(true);
+
+        $userManager->updateUser($user);
+
+        $user->setArtist($artist);
+    }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

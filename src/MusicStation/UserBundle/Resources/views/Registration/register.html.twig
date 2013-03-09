@@ -2,16 +2,55 @@
 
 {% block container %}
 
-    <div class="span6 offset3">
+    <div class="span9 offset1">
         <h1>Register to MusicStation</h1>
 
         <br><br>
 
-        <form id="register-form" action="{{ path('fos_user_registration_register') }}" {{ form_enctype(form) }} method="POST" class="fos_user_registration_register security-form" novalidate>
-            {{ form_widget(form) }}
+        <form action="{{ path('fos_user_registration_register') }}" {{ form_enctype(form) }} method="POST" id="register-form" class="fos_user_registration_register security-form" novalidate>
+
+            {% if form_errors(form) %}
+                {{ form_errors(form) }}
+                <br><br>
+            {% endif %}
+
+            <div class="row">
+                <div class="span4">
+                    {{ form_label(form.artist_name) }}
+                    {{ form_errors(form.artist_name) }}
+                    {{ form_widget(form.artist_name) }}
+                </div>
+                <div class="span4 offset1">
+                    {{ form_label(form.artist_bio) }}
+                    {{ form_widget(form.artist_bio) }}
+                </div>
+            </div>
+
+            <hr>
+
+            <div class="row">
+                <div class="span4">
+                    {{ form_label(form.username) }}
+                    {{ form_errors(form.username) }}
+                    {{ form_widget(form.username) }}
+                    <br>
+                    {{ form_label(form.email) }}
+                    {{ form_errors(form.email) }}
+                    {{ form_widget(form.email) }}
+                </div>
+                <div class="span4 offset1">
+                    {{ form_widget(form.plainPassword) }}
+                </div>
+            </div>
+
+            <hr>
+
             <div>
                 <input type="submit" value="Register" class="btn btn-primary" />
             </div>
+
+            {{ form_rest(form) }}
+
         </form>
     </div>
 

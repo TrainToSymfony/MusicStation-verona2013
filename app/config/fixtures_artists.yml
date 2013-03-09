@@ -23,6 +23,9 @@ parameters:
             shouts:
                 - "Hear In My Place (Acoustic) for Oxfam video"
                 - "Coldplay win Best British Live Act at BRITs"
+            user:
+                username: coldplay
+                password: coldplay
 
         "Depeche mode":
             bio: "Depeche Mode are an English electronic music band formed in 1980 in Basildon, Essex. The group's original line-up consisted of Dave Gahan (lead vocals, occasional songwriter since 2005), Martin Gore (keyboards, guitar, vocals, chief songwriter after 1981), Andy Fletcher (keyboards) and Vince Clarke (keyboards, chief songwriter 1980–81). Clarke left the band after the release of their 1981 debut album, Speak & Spell, and was replaced by Alan Wilder (keyboards, drums, occasional songwriter) with Gore taking over songwriting. Wilder left the band in 1995; Gahan, Gore, and Fletcher have since continued as a trio."
@@ -46,6 +49,9 @@ parameters:
             shouts:
                 - "Depeche Mode Announce Showcase Presented by Yahoo! @ SXSW Music Festival on Friday, March 15th"
                 - "Depeche Mode’s SXSW performance will be available on Yahoo! Music on March 26"
+            user:
+                username: depechemode
+                password: depechemode
 
         "Muse":
             bio: "Muse are an English rock band from Teignmouth, Devon, which formed in 1994. The band consists of school friends Matthew Bellamy (lead vocals, lead guitar, piano, keyboards, keytar), Christopher Wolstenholme (bass, vocals, keyboards, rhythm guitar, harmonica) and Dominic Howard (drums, percussion, synthesisers, sampling).<br>Since the release of their 2006 album Black Holes and Revelations, keyboardist and percussionist Morgan Nicholls has performed live with the band. Muse are known for their energetic and extravagant live performances and their fusion of many music genres, including space rock, progressive rock, alternative rock, heavy metal, classical music and electronica."
@@ -81,6 +87,9 @@ parameters:
             shouts:
                 - "Lo stage dei Muse assemblato in 5 minuti!"
                 - "I Muse vincono il Best Fan Community NME Award"
+            user:
+                username: muse
+                password: muse
 
         "Radiohead":
             bio: "Radiohead are an English rock band from Abingdon, Oxfordshire, formed in 1985. The band consists of Thom Yorke (lead vocals, guitar, piano), Jonny Greenwood (lead guitar, keyboards, other instruments), Colin Greenwood (bass), Phil Selway (drums, percussion) and Ed O'Brien (guitar, backing vocals).<br>Radiohead released their debut single \"Creep\" in 1992. The song was initially unsuccessful, but it became a worldwide hit several months after the release of their debut album, Pablo Honey (1993). Radiohead's popularity rose in the United Kingdom with the release of their second album, The Bends (1995). Radiohead's third album, OK Computer (1997), propelled them to greater international fame. Featuring an expansive sound and themes of modern alienation, OK Computer is often acclaimed as one of the landmark records of the 1990s.<br>Kid A (2000) and Amnesiac (2001) marked an evolution in Radiohead's musical style, as the group incorporated experimental electronic music, krautrock and jazz influences. Kid A, though somewhat polarising at the time of its release, is now frequently recognised as one of the most important albums of the 2000s. Hail to the Thief (2003), a mix of piano and guitar driven rock, electronics and lyrics inspired by war, was the band's final album for their major record label, EMI. Radiohead self-released their seventh album, In Rainbows (2007), as a digital download for which customers could set their own price, and later in physical form to critical and chart success. Radiohead's eighth album, The King of Limbs (2011), was an exploration of rhythm and quieter textures, which the band released independently."
@@ -113,6 +122,9 @@ parameters:
             shouts:
                 - "The King of Limbs - From The Basement (DVD & BluRay + Free Download)"
                 - "Radiohead to Start Working on New Album in September"
+            user:
+                username: radiohead
+                password: radiohead
 
         "The Rolling stones":
             bio: "The Rolling Stones are an English rock band formed in London in 1962.<br>The first settled line-up consisted of Brian Jones on guitar and harmonica, Ian Stewart on piano, Mick Jagger on lead vocals and harmonica, Keith Richards on guitar and vocals, Bill Wyman on bass and Charlie Watts on drums.<br>Since Wyman's retirement in 1993, the band's full members have been Jagger, Richards, Watts and guitarist Ronnie Wood who joined in 1975, replacing Mick Taylor (who followed Jones). Jones founded and led the band, but Jagger and Richards assumed leadership after becoming the band's primary songwriters, as Jones' physical and mental troubles gradually incapacitated him prior to his drowning death in 1969. Longtime regular bassist Darryl Jones and keyboardist Chuck Leavell are not full band members.<br>The Rock and Roll Hall of Fame inducted the Rolling Stones in 1989 noting that critics and the public recognized their claim to the title of \"World’s Greatest Rock and Roll Band.\" Rolling Stone magazine ranked them 4th on their \"100 Greatest Artists of All Time\" list, and their album sales are estimated to have been more than 200 million worldwide."
@@ -136,4 +148,7 @@ parameters:
             shouts:
                 - "Tonight the Rolling Stones celebrated a double victory at the annual NME Awards"
                 - "The Rolling Stones have been nominated for the BRIT award for Best Live Act!"
+            user:
+                username: therollingstones
+                password: therollingstones
 

@@ -69,3 +69,9 @@ fos_user:
     db_driver: orm
     firewall_name: main
     user_class: MusicStation\UserBundle\Entity\User
+    registration:
+        form:
+            type: musicstation_user_registration
+            handler: musicstation_user.form.handler.registration
+        confirmation:
+            enabled:    false

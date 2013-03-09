@@ -6,6 +6,14 @@
 
         <h1>Hello {{ app.user.username }}!</h1>
 
+        <ul id="user-menu">
+            <li>
+                <a href="{{ path('fos_user_profile_edit') }}">
+                    <i class="icon-user"></i> Edit profile
+                </a>
+            </li>
+        </ul>
+
     </div>
 
 {% endblock %}

@@ -53,9 +53,20 @@ class Artist
      */
     protected $shouts;
 
+    /**
+     * @ORM\OneToOne(targetEntity="MusicStation\UserBundle\Entity\User", cascade={"persist"})
+     * @ORM\JoinColumn(name="user_id", referencedColumnName="id")
+     */
+    protected $user;
+
     /****************************************************************************************************
      * CUSTOM FUNCTIONS
      ***************************************************************************************************/
+
+    public function __toString()
+    {
+        return $this->getName();
+    }
 
     /****************************************************************************************************
      * GETTERS AND SETTERS
@@ -212,5 +223,28 @@ class Artist
     public function getShouts()
     {
         return $this->shouts;
+    }
+
+    /**
+     * Set user
+     *
+     * @param \MusicStation\UserBundle\Entity\User $user
+     * @return Artist
+     */
+    public function setUser(\MusicStation\UserBundle\Entity\User $user = null)
+    {
+        $this->user = $user;
+    
+        return $this;
+    }
+
+    /**
+     * Get user
+     *
+     * @return \MusicStation\UserBundle\Entity\User 
+     */
+    public function getUser()
+    {
+        return $this->user;
     }
 }

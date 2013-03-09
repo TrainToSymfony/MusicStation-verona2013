@@ -1,0 +1,10 @@
+<ul class="box-shouts">
+    {% for entity in entities %}
+        <li>
+            <a href="{{ path('shout_show', {id: entity.id}) }}">
+                <img src="{{ asset('images/'~entity.artist.image) }}">
+                {{ entity.message }}
+            </a>
+        </li>
+    {% endfor %}
+</ul>

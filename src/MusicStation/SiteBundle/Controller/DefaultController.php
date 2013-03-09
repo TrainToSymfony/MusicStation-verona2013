@@ -22,14 +22,8 @@ class DefaultController extends Controller
             array('startDate' => 'ASC')
         );
 
-        $shouts = $em->getRepository('MusicStationUserBundle:Shout')->findBy(
-            array(),
-            array('id' => 'DESC')
-        );
-
         return array(
-            'events' => $events,
-            'shouts' => $shouts
+            'events' => $events
         );
     }
 

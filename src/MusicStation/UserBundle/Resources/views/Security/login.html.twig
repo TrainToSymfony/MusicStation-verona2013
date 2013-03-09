@@ -1,0 +1,39 @@
+{% extends 'MusicStationSiteBundle::layout.html.twig' %}
+
+{% block container %}
+
+    <div class="span6 offset3">
+
+            <h1>Login to MusicStation</h1>
+
+            <br><br>
+
+            <p>Please provide your account info to login:</p>
+
+            <br><br>
+
+            <form id="login-form" action="{{ path("fos_user_security_check") }}" method="post" class="security-form" novalidate>
+
+                {% if error %}
+                    <div class="errors">{{ error|trans({}, 'FOSUserBundle') }}</div>
+                    <br>
+                {% endif %}
+
+                <label for="username">Username</label>
+                <input type="text" id="username" name="_username" value="{{ last_username }}" required="required" />
+
+                <label for="password">Password</label>
+                <input type="password" id="password" name="_password" required="required" />
+
+                <br><br><br>
+
+                <input type="submit" id="_submit" name="_submit" value="{{ 'security.login.submit'|trans({}, 'FOSUserBundle') }}" class="btn btn-primary" />
+
+
+                <input type="hidden" name="_csrf_token" value="{{ csrf_token }}" />
+            </form>
+
+        </div>
+    </div>
+
+{% endblock %}

@@ -1,1 +1,11 @@
-Hello {{ name }}!
+{% extends 'MusicStationSiteBundle::layout.html.twig' %}
+
+{% block container %}
+
+    <div class="span12">
+
+        <h1>Hello {{ app.user.username }}!</h1>
+
+    </div>
+
+{% endblock %}

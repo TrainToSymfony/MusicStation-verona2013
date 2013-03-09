@@ -1,22 +1,18 @@
 {% extends 'MusicStationSiteBundle::layout.html.twig' %}
 
-{% block container %}
+{% block main %}
 
-    <div class="span12">
+    <h1>Shout</h1>
 
-        <h1>Shout</h1>
+    <div class="box-shout">
+        <a class="artist" href="{{ path('artist_show', {id: entity.artist.id}) }}">
+            <img src="{{ asset('images/'~entity.artist.image) }}">
+            {{ entity.artist.name }}
+        </a>
 
-        <div class="box-shout">
-            <a class="artist" href="{{ path('artist_show', {id: entity.artist.id}) }}">
-                <img src="{{ asset('images/'~entity.artist.image) }}">
-                {{ entity.artist.name }}
-            </a>
-
-            <p class="message">
-                {{ entity.message }}
-            </p>
-        </div>
-
+        <p class="message">
+            {{ entity.message }}
+        </p>
     </div>
 
 {% endblock %}

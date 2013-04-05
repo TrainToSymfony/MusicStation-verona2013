@@ -1,0 +1,53 @@
+{% extends 'MusicStationSiteBundle::layout.html.twig' %}
+
+{% block container %}
+
+    <div class="span12">
+
+        <form action="{{ path('user_event_create') }}" method="post" {{ form_enctype(form) }} class="form-horizontal" novalidate>
+
+            <fieldset>
+                <legend>Event creation</legend>
+
+                <div class="control-group {{ (form_errors(form.location)) ? 'error':'' }}">
+                    {{ form_label(form.location, null, {'label_attr': {'class': 'control-label'}}) }}
+                    <div class="controls">
+                        {{ form_widget(form.location) }}
+                        {% if form_errors(form.location) %}
+                            <span class="help-inline">{{ form_errors(form.location) }}</span>
+                        {% endif %}
+                    </div>
+                </div>
+
+                <div class="control-group">
+                    {{ form_label(form.startDate, null, {'label_attr': {'class': 'control-label'}}) }}
+                    <div class="controls">
+                        <div id="datetimepicker-{{ form.startDate.vars.id }}" class="input-append date">
+                            {{ form_widget(form.startDate, {'attr': {'data-format': 'yyyy/MM/dd hh:mm:ss'}}) }}
+                            <span class="add-on">
+                                <i data-time-icon="icon-time" data-date-icon="icon-calendar"></i>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-actions">
+                    <button type="submit" class="btn btn-primary">Create</button>
+                    <a href="{{ path('user_event') }}" class="btn">
+                        Back to the list
+                    </a>
+                </div>
+            </fieldset>
+
+            {{ form_rest(form) }}
+        </form>
+    </div>
+
+    <script type="text/javascript">
+        $(function() {
+            $('#datetimepicker-{{ form.startDate.vars.id }}').datetimepicker({
+                language: 'it-IT'
+            });
+        });
+    </script>
+{% endblock %}

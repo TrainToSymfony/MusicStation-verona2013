@@ -1,0 +1,6 @@
+MusicStation\UserBundle\Entity\Event:
+    properties:
+        location:
+            - NotBlank: ~
+        startDate:
+            - DateTime: ~

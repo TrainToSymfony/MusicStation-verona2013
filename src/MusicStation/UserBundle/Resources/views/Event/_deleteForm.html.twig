@@ -1,0 +1,6 @@
+<form action="{{ path('user_event_delete', { 'id': delete_form.id.vars.value }) }}" method="post">
+    {{ form_widget(delete_form) }}
+    <button type="submit" class="btn btn-mini">
+        <i class="icon-trash"></i> delete
+    </button>
+</form>

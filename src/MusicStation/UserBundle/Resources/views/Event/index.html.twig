@@ -1,0 +1,43 @@
+{% extends 'MusicStationSiteBundle::layout.html.twig' %}
+
+{% block container %}
+
+    <div class="span12">
+
+        <a href="{{ path('user_event_new') }}" class="btn btn-mini pull-right">
+            <i class="icon-plus-sign"></i> Create a new event
+        </a>
+
+        <h1>Events</h1>
+
+
+        <table class="records_list table">
+            <thead>
+                <tr>
+                    <th>Location</th>
+                    <th><i class="icon-chevron-down"></i> Start date</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for entity in entities %}
+                    <tr>
+                        <td>
+                            <a href="{{ path('user_event_edit', { 'id': entity.id }) }}">{{ entity.location }}</a>
+                        </td>
+                        <td>
+                            {% if entity.startDate %}{{ entity.startDate|date('Y-m-d H:i:s') }}{% endif %}
+                        </td>
+                        <td>
+                            <a href="{{ path('user_event_edit', { 'id': entity.id }) }}" class="btn btn-mini">
+                                <i class="icon-edit"></i> edit
+                            </a>
+                            {% render controller('MusicStationUserBundle:Event:_deleteForm', {'id': entity.id}) %}
+                        </td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+
+    </div>
+{% endblock %}

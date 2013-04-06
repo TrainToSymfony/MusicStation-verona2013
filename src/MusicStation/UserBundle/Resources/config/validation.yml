@@ -4,3 +4,8 @@ MusicStation\UserBundle\Entity\Event:
             - NotBlank: ~
         startDate:
             - DateTime: ~
+
+MusicStation\UserBundle\Entity\Shout:
+    properties:
+        message:
+            - NotBlank: ~

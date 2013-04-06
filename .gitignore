@@ -1,0 +1,11 @@
+# Eclipse project
+.buildpath
+.project
+.settings
+
+# Netbeans project files
+nbproject
+
+# PhpStorm project files
+.idea
+atlassian-ide-plugin.xml

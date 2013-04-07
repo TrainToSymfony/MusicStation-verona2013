@@ -13,5 +13,12 @@
             <argument>%admin_email%</argument>
         </service>
 
+        <!-- listener for kernel exceptions -->
+        <service id="kernel.listener.exception_listener" class="MusicStation\SiteBundle\Listener\ExceptionListener">
+            <argument type="service" id="twig" />
+            <argument type="service" id="kernel" />
+            <tag name="kernel.event_listener" event="kernel.exception" method="onKernelException" />
+        </service>
+        
     </services>
 </container>

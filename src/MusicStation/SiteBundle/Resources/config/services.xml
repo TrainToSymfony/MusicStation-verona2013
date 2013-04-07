@@ -4,17 +4,14 @@
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
 
-    <!--
-    <parameters>
-        <parameter key="music_station_site.example.class">MusicStation\SiteBundle\Example</parameter>
-    </parameters>
-
     <services>
-        <service id="music_station_site.example" class="%music_station_site.example.class%">
-            <argument type="service" id="service_id" />
-            <argument>plain_value</argument>
-            <argument>%parameter_name%</argument>
+
+        <!-- service to send MusicStation emails -->
+        <service id="musicstation.email_sender" class="MusicStation\SiteBundle\Service\EmailSenderService">
+            <argument type="service" id="mailer" />
+            <argument type="service" id="twig" />
+            <argument>%admin_email%</argument>
         </service>
+
     </services>
-    -->
 </container>

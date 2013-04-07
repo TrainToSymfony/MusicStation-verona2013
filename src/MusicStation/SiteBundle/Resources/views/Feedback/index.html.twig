@@ -1,0 +1,71 @@
+{% extends 'MusicStationSiteBundle::layout.html.twig' %}
+
+{% block main %}
+
+    <h1>Feedback</h1>
+
+    <br>
+
+    <p>
+        Tell us what you like or dislike about MusicStation, we are always trying to build a better service.
+        <br>
+        Your feedback matters!
+        <br><br>
+        Fill the form below with your name, an email to be eventually contacted, and your suggestions.
+    </p>
+
+    <br><br>
+
+    <form id="form-feedback" action="{{ path('feedback') }}" method="post" {{ form_enctype(form) }} class="form-horizontal" novalidate>
+
+        <fieldset>
+
+            <div class="control-group {{ (form_errors(form.name)) ? 'error':'' }}">
+                {{ form_label(form.name, null, {'label_attr': {'class': 'control-label'}}) }}
+                <div class="controls">
+                    {{ form_widget(form.name) }}
+                    {% if form_errors(form.name) %}
+                        <span class="help-inline">{{ form_errors(form.name) }}</span>
+                    {% endif %}
+                </div>
+            </div>
+
+            <div class="control-group {{ (form_errors(form.email)) ? 'error':'' }}">
+                {{ form_label(form.email, null, {'label_attr': {'class': 'control-label'}}) }}
+                <div class="controls">
+                    {{ form_widget(form.email) }}
+                    {% if form_errors(form.email) %}
+                        <span class="help-inline">{{ form_errors(form.email) }}</span>
+                    {% endif %}
+                </div>
+            </div>
+
+            <div class="control-group {{ (form_errors(form.message)) ? 'error':'' }}">
+                {{ form_label(form.message, null, {'label_attr': {'class': 'control-label'}}) }}
+                <div class="controls">
+                    {{ form_widget(form.message) }}
+                    {% if form_errors(form.message) %}
+                        <span class="help-inline">{{ form_errors(form.message) }}</span>
+                    {% endif %}
+                </div>
+            </div>
+
+            <div id="box-privacy" class="control-group {{ (form_errors(form.privacy)) ? 'error':'' }}">
+                <div class="controls">
+                    {{ form_widget(form.privacy) }} I accept the privacy terms and conditions
+                    {% if form_errors(form.privacy) %}
+                        <br>
+                        <span class="help-inline">{{ form_errors(form.privacy) }}</span>
+                    {% endif %}
+                </div>
+            </div>
+
+            <div class="form-actions">
+                <button type="submit" class="btn btn-primary">Send</button>
+            </div>
+        </fieldset>
+
+        {{ form_rest(form) }}
+    </form>
+
+{% endblock %}

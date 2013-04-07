@@ -13,3 +13,6 @@ parameters:
 
     locale:            en
     secret:            ThisTokenIsNotSoSecretChangeIt
+
+    #administrator email address
+    admin_email: recipient@example.com

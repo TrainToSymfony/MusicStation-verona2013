@@ -1,0 +1,207 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <title></title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    </head>
+    <body>
+        <table width="100%" cellpadding="0" cellspacing="0" border="0" id="background-table">
+            <tbody>
+                <tr>
+                    <td align="center" bgcolor="#ececec">
+                        <table style="margin:0 10px;" width="640" cellpadding="0" cellspacing="0" border="0">
+                            <tbody>
+                                <tr>
+                                    <td width="640" height="20"></td>
+                                </tr>
+
+                                <tr>
+                                    <td width="640">
+                                        <table id="top-bar" width="640" cellpadding="0" cellspacing="0" border="0" bgcolor="#be0d1d" style="border-radius:6px 6px 0px 0px; -moz-border-radius: 6px 6px 0px 0px; -webkit-border-radius:6px 6px 0px 0px; -webkit-font-smoothing: antialiased; background-color: #2f3030; color: #FFFFFF;">
+                                            <tbody>
+                                            <tr>
+                                                <td width="15"></td>
+                                                <td width="350" valign="middle" align="left">
+                                                    <table width="350" cellpadding="0" cellspacing="0" border="0">
+                                                        <tbody>
+                                                        <tr>
+                                                            <td width="350" height="8"></td>
+                                                        </tr>
+                                                        </tbody>
+                                                    </table>
+                                                    <div>
+                                                        <a href="{{ url('homepage') }}" style="font-weight: bold; color: #FFFFFF; text-decoration: none;">
+                                                            MusicStation
+                                                        </a>
+                                                    </div>
+                                                    <table width="350" cellpadding="0" cellspacing="0" border="0">
+                                                        <tbody>
+                                                        <tr>
+                                                            <td width="350" height="8"></td>
+                                                        </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </td>
+                                                <td width="30"></td>
+                                                <td width="255" valign="middle" align="right">
+                                                    <table width="255" cellpadding="0" cellspacing="0" border="0">
+                                                        <tbody>
+                                                        <tr>
+                                                            <td width="255" height="8"></td>
+                                                        </tr>
+                                                        </tbody>
+                                                    </table>
+                                                    <table cellpadding="0" cellspacing="0" border="0">
+                                                        <tbody>
+                                                        <tr>
+                                                            <td width="3"></td>
+                                                            <td valign="middle">
+                                                                <div>
+                                                                    <a href="https://www.facebook.com/pages/Train-to-Symfony/167185763434809" style="font-weight: bold; color: #FFFFFF; text-decoration: none;">
+                                                                        facebook
+                                                                    </a>
+                                                                </div>
+                                                            </td>
+                                                            <td width="10"></td>
+                                                            <td width="3"></td>
+                                                            <td valign="middle">
+                                                                <div>
+                                                                    <a href="https://twitter.com/TrainToSymfony" style="font-weight: bold; color: #FFFFFF; text-decoration: none;">
+                                                                        twitter
+                                                                    </a>
+                                                                </div>
+                                                            </td>
+                                                        </tr>
+                                                        </tbody>
+                                                    </table>
+                                                    <table width="255" cellpadding="0" cellspacing="0" border="0">
+                                                        <tbody>
+                                                        <tr>
+                                                            <td width="255" height="8"></td>
+                                                        </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </td>
+                                                <td width="15"></td>
+                                            </tr>
+                                            </tbody>
+                                        </table>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td id="header" width="640" align="center" bgcolor="#be0d1d">
+
+                                        <table width="640" cellpadding="0" cellspacing="0" border="0">
+                                            <tbody>
+                                            <tr>
+                                                <td width="30"></td>
+                                                <td width="580" height="30"></td>
+                                                <td width="30"></td>
+                                            </tr>
+                                            <tr>
+                                                <td width="30"></td>
+                                                <td width="580">
+                                                    <div align="center" id="headline">
+                                                        <p style="color: #FFFFFF; font-family: 'Helvetica Neue', Arial, Helvetica, Geneva, sans-serif; font-size: 36px; text-align: center; margin-top:0px; margin-bottom:30px;">
+                                                            <strong>
+                                                                <singleline label="Title">
+                                                                    <a href="{{ url('homepage') }}" style="color: #FFFFFF; text-decoration: none;">
+                                                                        MusicStation
+                                                                    </a>
+                                                                </singleline>
+                                                            </strong>
+                                                        </p>
+                                                    </div>
+                                                </td>
+                                                <td width="30"></td>
+                                            </tr>
+                                            </tbody>
+                                        </table>
+                                    </td>
+                                </tr>
+
+                                <tr><td width="640" height="60" bgcolor="#ffffff"></td></tr>
+                                <tr id="simple-content-row">
+                                    <td width="640" bgcolor="#ffffff">
+                                        <table width="640" cellpadding="0" cellspacing="0" border="0">
+                                            <tbody>
+                                                <tr>
+                                                    <td width="30"></td>
+                                                    <td width="580">
+                                                        <repeater>
+                                                            <layout label="Text only">
+                                                                <table width="580" cellpadding="0" cellspacing="0" border="0">
+                                                                    <tbody>
+                                                                        <tr>
+                                                                            <td width="580">
+                                                                                <p align="left" style="font-size: 18px; line-height:24px; color: #2f3030; font-weight:bold; margin-top:0px; margin-bottom:18px; font-family: 'Helvetica Neue', Arial, Helvetica, sans-serif;">
+                                                                                    <singleline label="Title">
+
+                                                                                        {% block title %}{% endblock %}
+
+                                                                                    </singleline>
+                                                                                </p>
+                                                                                <div align="left" style="font-size: 13px; line-height: 18px; color: #444444; margin-top: 0px; margin-bottom: 18px; font-family: 'Helvetica Neue', Arial, Helvetica, sans-serif;">
+                                                                                    <multiline label="Description">
+
+                                                                                        {% block body %}{% endblock %}
+
+                                                                                    </multiline>
+                                                                                </div>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td width="580" height="80"></td>
+                                                                        </tr>
+                                                                    </tbody>
+                                                                </table>
+                                                            </layout>
+                                                        </repeater>
+                                                    </td>
+                                                    <td width="30"></td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </td>
+                                </tr>
+
+                                <tr><td width="640" height="15" bgcolor="#ffffff"></td></tr>
+
+                                <tr>
+                                    <td width="640">
+                                        <table id="footer" width="640" cellpadding="0" cellspacing="0" border="0" bgcolor="#2f3030" style="border-radius:0px 0px 6px 6px; -moz-border-radius: 0px 0px 6px 6px; -webkit-border-radius:0px 0px 6px 6px; -webkit-font-smoothing: antialiased;">
+                                            <tbody>
+                                            <tr>
+                                                <td width="30"></td>
+                                                <td width="580" height="10"></td>
+                                                <td width="30"></td>
+                                            </tr>
+                                            <tr>
+                                                <td width="30"></td>
+                                                <td width="580" valign="top">
+                                                    <p align="left" style="font-size: 12px; line-height: 15px; color: #e2e2e2; margin-top: 0px; margin-bottom: 5px;">
+                                                        MusicStation is a demo project developer during the <a href="http://traintosymfony.com" style="color: #FFFFFF; font-weight: bold; text-decoration: none;">Train to Symfony workshop, 13-14 april 2013</a>
+                                                    </p>
+                                                </td>
+                                                <td width="30"></td>
+                                            </tr>
+                                            <tr>
+                                                <td width="30"></td>
+                                                <td width="580" height="10"></td>
+                                                <td width="30"></td>
+                                            </tr>
+                                            </tbody>
+                                        </table>
+                                    </td>
+                                </tr>
+                                <tr><td width="640" height="60"></td></tr>
+                            </tbody>
+                        </table>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

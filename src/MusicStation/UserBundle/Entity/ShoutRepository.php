@@ -4,6 +4,8 @@ namespace MusicStation\UserBundle\Entity;
 
 use Doctrine\ORM\EntityRepository;
 
+use MusicStation\UserBundle\Entity\Shout;
+
 /**
  * ShoutRepository
  *
@@ -12,4 +14,78 @@ use Doctrine\ORM\EntityRepository;
  */
 class ShoutRepository extends EntityRepository
 {
+    /**
+     * Get previous Shout object depending on $entity
+     *
+     * @param $entity
+     */
+    public function getPrev(Shout $entity)
+    {
+        $em = $this->getEntityManager();
+
+        $qb = $em->createQueryBuilder()
+            ->select('e')
+            ->from('MusicStationUserBundle:Shout', 'e')
+        ;
+
+        $qb
+            ->add('where', $qb->expr()->lt('e.id', ':id'))
+            ->setParameter('id', $entity->getId())
+        ;
+
+        $qb->orderBy('e.id', 'DESC');
+        $qb->setMaxResults(1);
+
+
+        return $qb->getQuery()->getOneOrNullResult();
+    }
+
+    /**
+     * Get next Shout object depending on $entity
+     *
+     * @param $entity
+     */
+    public function getNext(Shout $entity)
+    {
+        $em = $this->getEntityManager();
+
+        $qb = $em->createQueryBuilder()
+            ->select('e')
+            ->from('MusicStationUserBundle:Shout', 'e')
+        ;
+
+        $qb
+            ->add('where', $qb->expr()->gt('e.id', ':id'))
+            ->setParameter('id', $entity->getId())
+        ;
+
+        $qb->orderBy('e.id', 'ASC');
+        $qb->setMaxResults(1);
+
+
+        return $qb->getQuery()->getOneOrNullResult();
+    }
+
+    /**
+     * Find all entities setting a limit to the number of results
+     *
+     * @param $limit
+     */
+    public function findAllWithLimit($limit = false)
+    {
+        $em = $this->getEntityManager();
+
+        $qb = $em->createQueryBuilder()
+            ->select('e')
+            ->from('MusicStationUserBundle:Shout', 'e')
+            ->orderBy('e.id', 'DESC')
+        ;
+
+        // limit the result
+        if ($limit !== false) {
+            $qb->setMaxResults($limit);
+        }
+
+        return $qb->getQuery()->getResult();
+    }
 }

@@ -13,14 +13,11 @@ class ShoutController extends Controller
      *
      * @Template()
      */
-    public function _aside_latestsAction()
+    public function _aside_latestsAction($limit = 3)
     {
         $em = $this->getDoctrine()->getManager();
 
-        $entities = $em->getRepository('MusicStationUserBundle:Shout')->findBy(
-            array(),
-            array('id' => 'DESC')
-        );
+        $entities = $em->getRepository('MusicStationUserBundle:Shout')->findAllWithLimit($limit);
 
         return array(
             'entities' => $entities
@@ -41,8 +38,13 @@ class ShoutController extends Controller
             throw $this->createNotFoundException('Unable to find Shout entity.');
         }
 
+        $shoutPrev = $em->getRepository('MusicStationUserBundle:Shout')->getPrev($entity);
+        $shoutNext = $em->getRepository('MusicStationUserBundle:Shout')->getNext($entity);
+
         return array(
-            'entity' => $entity
+            'entity' => $entity,
+            'shout_prev' => $shoutPrev,
+            'shout_next' => $shoutNext
         );
     }
 }

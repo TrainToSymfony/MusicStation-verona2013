@@ -15,4 +15,30 @@
         </p>
     </div>
 
+    <div id="shout-prev-next">
+
+        {% if shout_prev %}
+            <a href="{{ path('shout_show', {id: shout_prev.id}) }}" class="prev">
+                <i class="icon-chevron-left"></i>
+                <div class="content">
+                    <img src="{{ asset('images/'~shout_prev.artist.image) }}">
+                    <br>
+                    {{ shout_prev.message }}
+                </div>
+            </a>
+        {% endif %}
+
+        {% if shout_next %}
+            <a href="{{ path('shout_show', {id: shout_next.id}) }}" class="next">
+                <div class="content">
+                    <img src="{{ asset('images/'~shout_next.artist.image) }}">
+                    <br>
+                    {{ shout_next.message }}
+                </div>
+                <i class="icon-chevron-right"></i>
+            </a>
+        {% endif %}
+
+    </div>
+
 {% endblock %}

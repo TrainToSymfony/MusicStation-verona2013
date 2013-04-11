@@ -6,6 +6,7 @@ use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
 use Symfony\Component\HttpFoundation\Request;
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\Cache;
 
 use MusicStation\SiteBundle\Form\FeedbackType;
 
@@ -16,6 +17,9 @@ class FeedbackController extends Controller
      *
      * @Route("/feedback", name="feedback")
      * @Template()
+     *
+     * cache expires in 1 month
+     * @Cache(expires="+1 month", smaxage="2592000")
      */
     public function indexAction(Request $request)
     {

@@ -4,7 +4,7 @@ imports:
     - { resource: fixtures_artists.yml }
 
 framework:
-    #esi:             ~
+    esi:             { enabled: true }
     translator:      { fallback: %locale% }
     secret:          %secret%
     router:

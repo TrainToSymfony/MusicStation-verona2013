@@ -78,7 +78,7 @@
                         </div>
 
                         {% block shout_aside_latests %}
-                            {{ render(controller('MusicStationSiteBundle:Shout:_aside_latests', {'limit': 8})) }}
+                            {{ render_esi(controller('MusicStationSiteBundle:Shout:_aside_latests', {'limit': 8})) }}
                         {% endblock %}
                     </div>
                 {% endblock %}

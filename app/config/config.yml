@@ -75,3 +75,6 @@ fos_user:
             handler: musicstation_user.form.handler.registration
         confirmation:
             enabled:    false
+    profile:
+        form:
+            type:     musicstation_user_profile

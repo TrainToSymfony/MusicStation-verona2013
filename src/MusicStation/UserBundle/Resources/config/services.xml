@@ -19,6 +19,11 @@
             <argument type="service" id="fos_user.util.token_generator" />
         </service>
 
+        <service id="musicstation_user.profile.form.type" class="MusicStation\UserBundle\Form\Type\ProfileFormType">
+            <argument>%fos_user.model.user.class%</argument>
+            <tag name="form.type" alias="musicstation_user_profile" />
+        </service>
+
     </services>
 
 </container>
